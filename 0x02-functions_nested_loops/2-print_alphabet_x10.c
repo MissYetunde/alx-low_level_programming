@@ -12,10 +12,10 @@ int i = 0;
 
 while (i <= 0)
 {
-for (c = 'a' ; c <= 'a' ; c++)
+for (c = 'a' ; c <= 'z' ; c++)
 {
 _putchar(c);
-} 
+}
 _putchar('\n');
 i++;
 }
