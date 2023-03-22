@@ -21,13 +21,13 @@ temp /= 10;
 num_digits++;
 }
 if (i != 98)
-printf(",");
+printf(", ");
 else
 num_digits--;
 printf("%u", fib2);
 while (num_digits < 10)
 {
-printf(" ");
+//printf(" ");
 num_digits++;
 }
 num_digits = 0;
