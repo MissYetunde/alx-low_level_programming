@@ -21,7 +21,7 @@ temp /= 10;
 num_digits++;
 }
 if (i != 98)
-printf(", ");
+printf(",");
 else
 num_digits--;
 printf("%u", fib2);
