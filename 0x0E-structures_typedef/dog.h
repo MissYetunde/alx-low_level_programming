@@ -1,6 +1,14 @@
 #ifndef DOG
 #define DOG
 
+/**
+ * struct dog - Struct dog
+ * @name: name
+ * @age: age
+ * @owner:  owner
+ * Description: 6stuct is for dog
+ */
+
 struct dog
 {
 	char *name;
