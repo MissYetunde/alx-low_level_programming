@@ -1,45 +1,39 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - Prints a listint_t linked list
- * @head: A points to the head node of the linked list
+ * print_listint_safe - reverses a linked list
+ * @head: pointer to the first node in the list
  *
- * Return: The number of nodes in the list
+ * Return: pointer to the number of nodes in the list
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *p1, *p2;
+	const listint_t *tmp_n = NULL;
+	const listint_t *l_n = NULL;
 	size_t count = 0;
+	size_t new_n;
 
-	if (head == NULL)
-	exit(98);
-
-	p1 = head;
-	p2 = head->next;
-
-	while (p2 != NULL && p2 < p1)
+	tmp_n = head;
+	while (tmp_n)
 	{
-	printf("[%p] %d\n", (void *)p1, p1->n);
-	p1 = p1->next;
-	p2 = p2->next;
-	count++;
-	}
-
-	printf("[%p] %d\n", (void *)p1, p1->n);
-	count++;
-
-	if (p2 != NULL)
-	{
-	p2 = p2->next;
-	while (p2 != NULL && p2 > p1)
-	{
-	printf("[%p] %d\n", (void *)p1, p1->n);
-	p1 = p1->next;
-	p2 = p2->next;
-	count++;
-	}
-	printf("-> [%p] %d\n", (void *)p1, p1->n);
-	count++;
+		printf("[%p] %d\n", (void *)tmp_n, tmp_n->n);
+		count++;
+		tmp_n = tmp_n->next;
+		l_n = head;
+		new_n = 0;
+		while (new_n < count)
+		{
+			if (tmp_n == l_n)
+			{
+				printf("-> [%p] %d\n", (void *)tmp_n, tmp_n->n);
+				return (count);
+			}
+			l_n = l_n->next;
+			new_n++;
+		}
+		if (!head)
+			exit(98);
 	}
 	return (count);
 }
